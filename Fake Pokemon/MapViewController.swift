@@ -14,14 +14,26 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    //* does the user's location need to be updated?
     var updateFlag = true
+    
     
     //* manages user's location
     var manager = CLLocationManager()
     
+    //* array to hold Pokemon objects
+    var pokemons : [Pokemon] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //* update the user's location on view
+        updateFlag = true
+        
+        //* populate array with all Pokemon objects from core data
+        pokemons = getAllPokemon()
+        print("@@@\(pokemons.count)")
         
         manager.delegate = self
         
@@ -49,6 +61,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             
         } else {
             manager.requestWhenInUseAuthorization()
+            print("map authorization received in prompt")
+            mapView.showsUserLocation = true
+            manager.startUpdatingLocation()
         }
         
         
@@ -77,7 +92,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! PokedexViewController
+        
+        nextVC.pokemons = pokemons
+    }
     
     
 }

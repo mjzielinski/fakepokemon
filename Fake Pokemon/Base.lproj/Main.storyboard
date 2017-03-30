@@ -30,7 +30,7 @@
                                     <constraint firstAttribute="height" constant="50" id="HKY-Tm-p4t"/>
                                     <constraint firstAttribute="width" constant="50" id="zeB-pJ-Xcc"/>
                                 </constraints>
-                                <state key="normal" image="compass.png"/>
+                                <state key="normal" image="compass"/>
                                 <connections>
                                     <action selector="compassTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="77T-8l-ePc"/>
                                 </connections>
@@ -41,9 +41,9 @@
                                     <constraint firstAttribute="width" constant="50" id="TuP-Nk-klc"/>
                                     <constraint firstAttribute="height" constant="50" id="ecq-O6-8hR"/>
                                 </constraints>
-                                <state key="normal" image="011-pokeball.png"/>
+                                <state key="normal" image="pokeball"/>
                                 <connections>
-                                    <segue destination="CXp-ve-zlo" kind="presentation" id="1lE-VM-tbK"/>
+                                    <segue destination="CXp-ve-zlo" kind="presentation" identifier="pokedexSegue" id="1lE-VM-tbK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -88,7 +88,7 @@
                                     <constraint firstAttribute="height" constant="50" id="tZc-z9-ys7"/>
                                     <constraint firstAttribute="width" constant="50" id="vah-V6-9nK"/>
                                 </constraints>
-                                <state key="normal" image="001-map.png"/>
+                                <state key="normal" image="map"/>
                                 <connections>
                                     <action selector="mapTapped:" destination="CXp-ve-zlo" eventType="touchUpInside" id="2Qu-qu-IXW"/>
                                 </connections>
@@ -110,12 +110,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tm6-vg-vOP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="854" y="58"/>
+            <point key="canvasLocation" x="847" y="108"/>
         </scene>
     </scenes>
     <resources>
-        <image name="001-map.png" width="64" height="64"/>
-        <image name="011-pokeball.png" width="64" height="64"/>
-        <image name="compass.png" width="64" height="64"/>
+        <image name="compass" width="64" height="64"/>
+        <image name="map" width="64" height="64"/>
+        <image name="pokeball" width="64" height="64"/>
     </resources>
 </document>
