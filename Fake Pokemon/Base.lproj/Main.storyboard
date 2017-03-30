@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="Fake_Pokemon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,102 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aeV-FH-gwJ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTH-Af-K3j">
+                                <rect key="frame" x="315" y="40" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HKY-Tm-p4t"/>
+                                    <constraint firstAttribute="width" constant="50" id="zeB-pJ-Xcc"/>
+                                </constraints>
+                                <state key="normal" image="compass.png"/>
+                                <connections>
+                                    <action selector="compassTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="77T-8l-ePc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bg4-b5-2zk">
+                                <rect key="frame" x="162.5" y="597" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="TuP-Nk-klc"/>
+                                    <constraint firstAttribute="height" constant="50" id="ecq-O6-8hR"/>
+                                </constraints>
+                                <state key="normal" image="011-pokeball.png"/>
+                                <connections>
+                                    <segue destination="CXp-ve-zlo" kind="presentation" id="1lE-VM-tbK"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Bg4-b5-2zk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Uj-a5-wQp"/>
+                            <constraint firstItem="YTH-Af-K3j" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="6Rj-HE-sHl"/>
+                            <constraint firstAttribute="trailing" secondItem="YTH-Af-K3j" secondAttribute="trailing" constant="10" id="KXl-DW-YJ6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Bg4-b5-2zk" secondAttribute="bottom" constant="20" id="ecg-GQ-r7a"/>
+                            <constraint firstItem="aeV-FH-gwJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="een-RE-TQO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aeV-FH-gwJ" secondAttribute="bottom" id="oxI-y9-76R"/>
+                            <constraint firstItem="aeV-FH-gwJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qGg-3U-rqp"/>
+                            <constraint firstAttribute="trailing" secondItem="aeV-FH-gwJ" secondAttribute="trailing" id="vZr-nb-WsO"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="aeV-FH-gwJ" id="m9X-vA-VpI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Pokedex View Controller-->
+        <scene sceneID="QJk-i8-qxZ">
+            <objects>
+                <viewController id="CXp-ve-zlo" customClass="PokedexViewController" customModule="Fake_Pokemon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZQ1-ep-7yF"/>
+                        <viewControllerLayoutGuide type="bottom" id="waL-IK-cc2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dte-GQ-jJ8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ueH-IE-Uwk">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQS-dv-jVc">
+                                <rect key="frame" x="162.5" y="597" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="tZc-z9-ys7"/>
+                                    <constraint firstAttribute="width" constant="50" id="vah-V6-9nK"/>
+                                </constraints>
+                                <state key="normal" image="001-map.png"/>
+                                <connections>
+                                    <action selector="mapTapped:" destination="CXp-ve-zlo" eventType="touchUpInside" id="2Qu-qu-IXW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aQS-dv-jVc" firstAttribute="centerX" secondItem="Dte-GQ-jJ8" secondAttribute="centerX" id="1yc-vf-1Ol"/>
+                            <constraint firstItem="waL-IK-cc2" firstAttribute="top" secondItem="ueH-IE-Uwk" secondAttribute="bottom" id="AQn-kC-NSC"/>
+                            <constraint firstItem="ueH-IE-Uwk" firstAttribute="leading" secondItem="Dte-GQ-jJ8" secondAttribute="leading" id="JH9-gm-Ecl"/>
+                            <constraint firstItem="ueH-IE-Uwk" firstAttribute="top" secondItem="ZQ1-ep-7yF" secondAttribute="bottom" id="TNm-ov-VKr"/>
+                            <constraint firstItem="waL-IK-cc2" firstAttribute="top" secondItem="aQS-dv-jVc" secondAttribute="bottom" constant="20" id="f5C-u1-Aoq"/>
+                            <constraint firstAttribute="trailing" secondItem="ueH-IE-Uwk" secondAttribute="trailing" id="fSa-l1-lji"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="ueH-IE-Uwk" id="6Mf-le-AIE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tm6-vg-vOP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="854" y="58"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="001-map.png" width="64" height="64"/>
+        <image name="011-pokeball.png" width="64" height="64"/>
+        <image name="compass.png" width="64" height="64"/>
+    </resources>
 </document>

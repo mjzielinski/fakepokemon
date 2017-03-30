@@ -8,22 +8,52 @@
 
 /* Begin PBXBuildFile section */
 		E487047A1E8D3A3500C9CEFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48704791E8D3A3500C9CEFD /* AppDelegate.swift */; };
-		E487047C1E8D3A3500C9CEFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487047B1E8D3A3500C9CEFD /* ViewController.swift */; };
+		E487047C1E8D3A3500C9CEFD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487047B1E8D3A3500C9CEFD /* MapViewController.swift */; };
 		E487047F1E8D3A3500C9CEFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E487047D1E8D3A3500C9CEFD /* Main.storyboard */; };
 		E48704821E8D3A3500C9CEFD /* Fake_Pokemon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E48704801E8D3A3500C9CEFD /* Fake_Pokemon.xcdatamodeld */; };
 		E48704841E8D3A3500C9CEFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E48704831E8D3A3500C9CEFD /* Assets.xcassets */; };
 		E48704871E8D3A3500C9CEFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48704851E8D3A3500C9CEFD /* LaunchScreen.storyboard */; };
+		E48704901E8D433600C9CEFD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E487048F1E8D433600C9CEFD /* MapKit.framework */; };
+		E48704921E8D519000C9CEFD /* compass.png in Resources */ = {isa = PBXBuildFile; fileRef = E48704911E8D519000C9CEFD /* compass.png */; };
+		E487049F1E8D529400C9CEFD /* 001-zubat.png in Resources */ = {isa = PBXBuildFile; fileRef = E48704941E8D529400C9CEFD /* 001-zubat.png */; };
+		E48704A01E8D529400C9CEFD /* 002-weedle.png in Resources */ = {isa = PBXBuildFile; fileRef = E48704951E8D529400C9CEFD /* 002-weedle.png */; };
+		E48704A11E8D529400C9CEFD /* 003-pointer.png in Resources */ = {isa = PBXBuildFile; fileRef = E48704961E8D529400C9CEFD /* 003-pointer.png */; };
+		E48704A21E8D529400C9CEFD /* 004-bellsprout.png in Resources */ = {isa = PBXBuildFile; fileRef = E48704971E8D529400C9CEFD /* 004-bellsprout.png */; };
+		E48704A31E8D529400C9CEFD /* 005-dratini.png in Resources */ = {isa = PBXBuildFile; fileRef = E48704981E8D529400C9CEFD /* 005-dratini.png */; };
+		E48704A41E8D529400C9CEFD /* 006-squirtle.png in Resources */ = {isa = PBXBuildFile; fileRef = E48704991E8D529400C9CEFD /* 006-squirtle.png */; };
+		E48704A51E8D529400C9CEFD /* 007-charmander.png in Resources */ = {isa = PBXBuildFile; fileRef = E487049A1E8D529400C9CEFD /* 007-charmander.png */; };
+		E48704A61E8D529400C9CEFD /* 008-psyduck.png in Resources */ = {isa = PBXBuildFile; fileRef = E487049B1E8D529400C9CEFD /* 008-psyduck.png */; };
+		E48704A71E8D529400C9CEFD /* 009-pikachu.png in Resources */ = {isa = PBXBuildFile; fileRef = E487049C1E8D529400C9CEFD /* 009-pikachu.png */; };
+		E48704A81E8D529400C9CEFD /* 010-snorlax.png in Resources */ = {isa = PBXBuildFile; fileRef = E487049D1E8D529400C9CEFD /* 010-snorlax.png */; };
+		E48704A91E8D529400C9CEFD /* 011-pokeball.png in Resources */ = {isa = PBXBuildFile; fileRef = E487049E1E8D529400C9CEFD /* 011-pokeball.png */; };
+		E48704AB1E8D782B00C9CEFD /* 001-map.png in Resources */ = {isa = PBXBuildFile; fileRef = E48704AA1E8D782B00C9CEFD /* 001-map.png */; };
+		E48704AD1E8D78DD00C9CEFD /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48704AC1E8D78DD00C9CEFD /* PokedexViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E48704761E8D3A3500C9CEFD /* Fake Pokemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fake Pokemon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48704791E8D3A3500C9CEFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E487047B1E8D3A3500C9CEFD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E487047B1E8D3A3500C9CEFD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		E487047E1E8D3A3500C9CEFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E48704811E8D3A3500C9CEFD /* Fake_Pokemon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fake_Pokemon.xcdatamodel; sourceTree = "<group>"; };
 		E48704831E8D3A3500C9CEFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E48704861E8D3A3500C9CEFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E48704881E8D3A3500C9CEFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E487048F1E8D433600C9CEFD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E48704911E8D519000C9CEFD /* compass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass.png; sourceTree = "<group>"; };
+		E48704941E8D529400C9CEFD /* 001-zubat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "001-zubat.png"; sourceTree = "<group>"; };
+		E48704951E8D529400C9CEFD /* 002-weedle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "002-weedle.png"; sourceTree = "<group>"; };
+		E48704961E8D529400C9CEFD /* 003-pointer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "003-pointer.png"; sourceTree = "<group>"; };
+		E48704971E8D529400C9CEFD /* 004-bellsprout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "004-bellsprout.png"; sourceTree = "<group>"; };
+		E48704981E8D529400C9CEFD /* 005-dratini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "005-dratini.png"; sourceTree = "<group>"; };
+		E48704991E8D529400C9CEFD /* 006-squirtle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "006-squirtle.png"; sourceTree = "<group>"; };
+		E487049A1E8D529400C9CEFD /* 007-charmander.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "007-charmander.png"; sourceTree = "<group>"; };
+		E487049B1E8D529400C9CEFD /* 008-psyduck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "008-psyduck.png"; sourceTree = "<group>"; };
+		E487049C1E8D529400C9CEFD /* 009-pikachu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "009-pikachu.png"; sourceTree = "<group>"; };
+		E487049D1E8D529400C9CEFD /* 010-snorlax.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "010-snorlax.png"; sourceTree = "<group>"; };
+		E487049E1E8D529400C9CEFD /* 011-pokeball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "011-pokeball.png"; sourceTree = "<group>"; };
+		E48704AA1E8D782B00C9CEFD /* 001-map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "001-map.png"; sourceTree = "<group>"; };
+		E48704AC1E8D78DD00C9CEFD /* PokedexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokedexViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E48704901E8D433600C9CEFD /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +73,7 @@
 			children = (
 				E48704781E8D3A3500C9CEFD /* Fake Pokemon */,
 				E48704771E8D3A3500C9CEFD /* Products */,
+				E487048E1E8D433600C9CEFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +89,44 @@
 			isa = PBXGroup;
 			children = (
 				E48704791E8D3A3500C9CEFD /* AppDelegate.swift */,
-				E487047B1E8D3A3500C9CEFD /* ViewController.swift */,
+				E487047B1E8D3A3500C9CEFD /* MapViewController.swift */,
+				E48704AC1E8D78DD00C9CEFD /* PokedexViewController.swift */,
 				E487047D1E8D3A3500C9CEFD /* Main.storyboard */,
+				E48704931E8D527100C9CEFD /* images */,
 				E48704831E8D3A3500C9CEFD /* Assets.xcassets */,
 				E48704851E8D3A3500C9CEFD /* LaunchScreen.storyboard */,
 				E48704881E8D3A3500C9CEFD /* Info.plist */,
 				E48704801E8D3A3500C9CEFD /* Fake_Pokemon.xcdatamodeld */,
 			);
 			path = "Fake Pokemon";
+			sourceTree = "<group>";
+		};
+		E487048E1E8D433600C9CEFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E487048F1E8D433600C9CEFD /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E48704931E8D527100C9CEFD /* images */ = {
+			isa = PBXGroup;
+			children = (
+				E48704941E8D529400C9CEFD /* 001-zubat.png */,
+				E48704AA1E8D782B00C9CEFD /* 001-map.png */,
+				E48704951E8D529400C9CEFD /* 002-weedle.png */,
+				E48704961E8D529400C9CEFD /* 003-pointer.png */,
+				E48704971E8D529400C9CEFD /* 004-bellsprout.png */,
+				E48704981E8D529400C9CEFD /* 005-dratini.png */,
+				E48704991E8D529400C9CEFD /* 006-squirtle.png */,
+				E487049A1E8D529400C9CEFD /* 007-charmander.png */,
+				E487049B1E8D529400C9CEFD /* 008-psyduck.png */,
+				E487049C1E8D529400C9CEFD /* 009-pikachu.png */,
+				E487049D1E8D529400C9CEFD /* 010-snorlax.png */,
+				E487049E1E8D529400C9CEFD /* 011-pokeball.png */,
+				E48704911E8D519000C9CEFD /* compass.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,8 +189,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E48704A71E8D529400C9CEFD /* 009-pikachu.png in Resources */,
+				E48704A11E8D529400C9CEFD /* 003-pointer.png in Resources */,
 				E48704871E8D3A3500C9CEFD /* LaunchScreen.storyboard in Resources */,
+				E48704A91E8D529400C9CEFD /* 011-pokeball.png in Resources */,
+				E48704A51E8D529400C9CEFD /* 007-charmander.png in Resources */,
+				E48704A21E8D529400C9CEFD /* 004-bellsprout.png in Resources */,
+				E48704A41E8D529400C9CEFD /* 006-squirtle.png in Resources */,
 				E48704841E8D3A3500C9CEFD /* Assets.xcassets in Resources */,
+				E48704A61E8D529400C9CEFD /* 008-psyduck.png in Resources */,
+				E48704921E8D519000C9CEFD /* compass.png in Resources */,
+				E48704AB1E8D782B00C9CEFD /* 001-map.png in Resources */,
+				E48704A81E8D529400C9CEFD /* 010-snorlax.png in Resources */,
+				E487049F1E8D529400C9CEFD /* 001-zubat.png in Resources */,
+				E48704A01E8D529400C9CEFD /* 002-weedle.png in Resources */,
+				E48704A31E8D529400C9CEFD /* 005-dratini.png in Resources */,
 				E487047F1E8D3A3500C9CEFD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,7 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E487047C1E8D3A3500C9CEFD /* ViewController.swift in Sources */,
+				E487047C1E8D3A3500C9CEFD /* MapViewController.swift in Sources */,
+				E48704AD1E8D78DD00C9CEFD /* PokedexViewController.swift in Sources */,
 				E48704821E8D3A3500C9CEFD /* Fake_Pokemon.xcdatamodeld in Sources */,
 				E487047A1E8D3A3500C9CEFD /* AppDelegate.swift in Sources */,
 			);
