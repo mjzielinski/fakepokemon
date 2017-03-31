@@ -26,6 +26,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     var rarePokemons : [Pokemon] = []
     var commonPokemons : [Pokemon] = []
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,8 +60,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             manager.startUpdatingLocation()
         }
         
+      
         //* randomly spawn fake pokemon
-        Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: { (timer) in
+
+        Timer.scheduledTimer(withTimeInterval: 10.0, repeats: true, block: { (timer) in
             
             if let coord = self.manager.location?.coordinate {
                 
@@ -89,7 +92,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
     }
     
-
+    
     
     //* allow different image to appear instead of pin for annotation
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -222,4 +225,3 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     
 }
-
