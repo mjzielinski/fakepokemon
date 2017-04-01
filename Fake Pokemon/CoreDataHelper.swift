@@ -11,7 +11,6 @@ import CoreData
 
 //* adds all pokemon to core data
 func addAllPokemon() {
-    
     createPokemon(name: "Abra", image: "abra", rare: false)
     createPokemon(name: "BellSprout", image: "bellsprout", rare: false)
     createPokemon(name: "Bullbasaur", image: "bullbasaur", rare: false)
@@ -29,10 +28,8 @@ func addAllPokemon() {
     createPokemon(name: "Ratta", image: "ratta", rare: false)
     createPokemon(name: "Snorlax", image: "snorlax", rare: true)
     createPokemon(name: "Squirtle", image: "squirtle", rare: false)
-    createPokemon(name: "Squirtle", image: "squirtle", rare: false)
     createPokemon(name: "Weedle", image: "weedle", rare: false)
     createPokemon(name: "Zubat", image: "zubat", rare: false)
-    
     (UIApplication.shared.delegate as! AppDelegate).saveContext()
 }
 
@@ -62,12 +59,10 @@ func getAllPokemon() -> [Pokemon] {
     return []
 }
 
-
 //* returns an array of all caught Pokemon
 func getCaughtPokemon(allPokemon: [Pokemon]) -> [Pokemon] {
     
     var caughtPokemon : [Pokemon] = []
-    
     for poke in allPokemon {
         if poke.caught {
             caughtPokemon.append(poke)
@@ -79,8 +74,8 @@ func getCaughtPokemon(allPokemon: [Pokemon]) -> [Pokemon] {
 
 //* returns an array of all uncaught Pokemon
 func getUncaughtPokemon(allPokemon: [Pokemon]) -> [Pokemon] {
-    var uncaughtPokemon : [Pokemon] = []
     
+    var uncaughtPokemon : [Pokemon] = []
     for poke in allPokemon {
         if !poke.caught {
             uncaughtPokemon.append(poke)
@@ -91,8 +86,8 @@ func getUncaughtPokemon(allPokemon: [Pokemon]) -> [Pokemon] {
 
 //* returns an array of all common Pokemon
 func getCommonPokemon(allPokemon: [Pokemon]) -> [Pokemon] {
-    var commonPokemon : [Pokemon] = []
     
+    var commonPokemon : [Pokemon] = []
     for poke in allPokemon {
         if !poke.rare {
             commonPokemon.append(poke)
@@ -103,8 +98,8 @@ func getCommonPokemon(allPokemon: [Pokemon]) -> [Pokemon] {
 
 //* returns an array of all rare Pokemon
 func getRarePokemon(allPokemon: [Pokemon]) -> [Pokemon] {
-    var rarePokemon : [Pokemon] = []
     
+    var rarePokemon : [Pokemon] = []
     for poke in allPokemon {
         if poke.rare {
             rarePokemon.append(poke)

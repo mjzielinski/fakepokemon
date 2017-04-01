@@ -10,6 +10,7 @@ import UIKit
 
 class PokedexViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    //* outlet to table view
     @IBOutlet weak var tableView: UITableView!
     
     //* holds all Pokemon objects passed from previous VC
@@ -27,19 +28,16 @@ class PokedexViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
         tableView.delegate = self
 
-
+        //* generate array of caught pokemon and sort
         caughtPokemon = getCaughtPokemon(allPokemon: pokemons)
         caughtPokemon.sort {
             $0.name! < $1.name!
         }
+        //* generate array of uncaught pokemon and sort
         uncaughtPokemon = getUncaughtPokemon(allPokemon: pokemons)
         uncaughtPokemon.sort {
             $0.name! < $1.name!
         }
-        print("***\(uncaughtPokemon.count)")
-        print("$$$\(caughtPokemon.count)")
-        
-       
     }
     
     //* specify number of rows for each section
@@ -53,10 +51,11 @@ class PokedexViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     //* fill in the content for each row at index path
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = UITableViewCell()
-
         var pokemon = Pokemon()
         
+        //* getting the name and number for caught or uncaught
         if indexPath.section == 0 {
             pokemon = caughtPokemon[indexPath.row]
             cell.textLabel?.text = "\(pokemon.name!) (\(pokemon.number))"
@@ -65,7 +64,7 @@ class PokedexViewController: UIViewController, UITableViewDelegate, UITableViewD
             cell.textLabel?.text = "\(pokemon.name!)"
         }
 
-        
+        //* add image to the cell
         cell.imageView?.image = UIImage(named: pokemon.image!)
         return cell
     }
@@ -79,13 +78,15 @@ class PokedexViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         //* sections are numbers starting from zero
         if section == 0 {
-            return "Caught"
+            return "CAUGHT POKEMON"
         } else {
-            return "Uncaught"
+            return "UNCAUGHT POKEMON"
         }
     }
     
+    //* action for map tapped
     @IBAction func mapTapped(_ sender: Any) {
+        //* dismiss this view controller
         dismiss(animated: true, completion: nil)
     }
 
